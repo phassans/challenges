@@ -1,0 +1,5 @@
+TreeMap - Sorted on Keys
+HashMap - if you know key you can get value but you cannot get key from value.
+LinkedHashMap - Insertion Order
+HashTable - Synchronized and no null keys or values. Hashmap is not Synchronized;
+	Whereas Hashmap allows one null key and any null values.

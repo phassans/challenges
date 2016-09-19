@@ -1,6 +1,27 @@
 package com.interview.challenges.basic;
 
 public class Basic {
+
+    public void evaluate(Basic basic) {
+        System.out.println("isPrime " + basic.isPrime(1));
+
+        System.out.println("Factorial Sequential " + basic.fact(5));
+
+        System.out.println("Factorial Recursive " + basic.factRecursive(5));
+
+        System.out.print("Fibonacci ");
+        basic.fibonacci(8);
+
+        System.out.print("\nFibonacci Recursive ");
+        for (int i = 1; i <= 8; i++) {
+            System.out.print(basic.fibonacciRecursive(i) + ", ");
+        }
+
+        basic.generatePrimesBetween(100);
+
+        basic.generateNPrimes(100);
+    }
+
     public boolean isPrime(int num) {
         if (num == 1)
             return false;
