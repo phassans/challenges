@@ -3,6 +3,7 @@ package com.interview.challenges;
 import com.interview.challenges.arrays.ArraysEasy;
 import com.interview.challenges.arrays.ArraysMedium;
 import com.interview.challenges.basic.Basic;
+import com.interview.challenges.strings.Strings;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,8 +14,10 @@ public class Main {
         //arrayEasy.evaluate(arrayEasy);
         
         ArraysMedium arraysMedium = new ArraysMedium();
-        arraysMedium.evaluate();
+        //arraysMedium.evaluate();
         
         
+        Strings strObj = new Strings();
+        strObj.evaluate();
     }
 }
