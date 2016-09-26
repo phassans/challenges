@@ -60,9 +60,9 @@ public class ArraysMedium {
         doPermute(arr, newArr, used, 0);
     }
 
-    private void doPermute(int[] arr2, ArrayList<Integer> newArr, boolean[] used, int level) {
+    private void doPermute(int[] arr2, ArrayList<Integer> list, boolean[] used, int level) {
         if (level == arr2.length) {
-            for (Integer a : newArr) {
+            for (Integer a : list) {
                 System.out.print(a + ", ");
             }
             System.out.println();
@@ -70,11 +70,11 @@ public class ArraysMedium {
         for (int i = 0; i < arr2.length; i++) {
             if (used[i])
                 continue;
-            newArr.add(arr2[i]);
+            list.add(arr2[i]);
             used[i] = true;
-            doPermute(arr2, newArr, used, level + 1);
+            doPermute(arr2, list, used, level + 1);
             used[i] = false;
-            newArr.remove(newArr.size() - 1);
+            list.remove(list.size() - 1);
         }
     }
     
@@ -84,9 +84,9 @@ public class ArraysMedium {
         doCombine(arr, newArr, used, 0);
     }
     
-    private void doCombine(int[] arr2, ArrayList<Integer> newArr, boolean[] used, int level) {
+    private void doCombine(int[] arr2, ArrayList<Integer> list, boolean[] used, int level) {
         if (level <= arr2.length) {
-            for (Integer a : newArr) {
+            for (Integer a : list) {
                 System.out.print(a + ", ");
             }
             System.out.println();
@@ -94,11 +94,11 @@ public class ArraysMedium {
         for (int i = 0; i < arr2.length; i++) {
             if (used[i])
                 continue;
-            newArr.add(arr2[i]);
+            list.add(arr2[i]);
             used[i] = true;
-            doCombine(arr2, newArr, used, level + 1);
+            doCombine(arr2, list, used, level + 1);
             used[i] = false;
-            newArr.remove(newArr.size() - 1);
+            list.remove(list.size() - 1);
         }
     }
 }
